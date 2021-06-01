@@ -1,0 +1,64 @@
+{% extends 'base.html'%}
+{% block title %}Home {% endblock title %}
+{% block contact %}active{% endblock contact %}
+
+
+
+
+{% block body %}
+        {% load static %}
+        <div class=" text-center bg-light js--sticky-menu">
+                <div class="col-md-5 p-lg-5 mx-auto">
+                  <h1 class="display-4 fw-normal">CONTACT US </h1>
+                  <p class="lead fw-normal" style="text-align: justify;"><b> Address:</b> Shirdi-Kopargoan Road, In Front Of<br>
+                         Swastik Hotel, SR. No. 370/11, Kokamthan <br> District:- Ahmednagar Kopargaon-423601, Maharashtra, India
+                        <br>
+                       <b>Phone:</b>  +918983382986
+                        <br>
+                       <b>Email:</b>  pravindhanad2@gmail.com</p>
+                       <a type="submit" class="btn btn-outline-warning my-3 rounded"  href="https://wa.me/8983382986">
+                        <i class="fab fa-whatsapp fs-3"></i>
+                        WhatsApp Me
+                </a>
+                </div>
+                <div class="product-device shadow-sm d-none d-md-block"></div>
+                <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+              </div>
+        
+        <form method="post" action="/contact/"  id="cont" class="pb-30 pt-30 p-30 " style="background-color:rgb(250, 246, 246);">
+                {% csrf_token %}
+             <div class="container col-lg-6 col-md-12" style="background:#0b123a!important">
+                <div class="text-center pt-20 pb-20" style="color:white; font-size:2.5rem;font-family: 'Courgette', cursive;">
+                        Send Message</div>
+                <div class="row p-3">
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Name" aria-label="name"  name="name">
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="E-mail" aria-label="email" name="email">
+                        </div>
+                </div>
+                <div class="row p-3">
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Phone" aria-label="phone" name="phone">
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Subject" aria-label="subject"  name="subject">
+                        </div>
+                </div>
+                <div class="form-floating p-3">
+                      
+                        <textarea class="form-control" placeholder="Message" name="content" style="height: 150px"></textarea>
+                      </div>
+                    <div class="text-center">
+                       <button type="submit" class="btn btn-outline-warning my-3 rounded">Submit</button>
+                    </div>
+                    <div class="text-center">
+                    </div>
+            </div>
+        
+        
+        </form>
+        
+
+{% endblock body %}

@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+{% block title %}Home {% endblock title %}
+{% block about %}active{% endblock about %}
+
+
+
+
+{% block body %}
+        {% load static %}
+         <!-- Start Working With Us Area -->
+    <div class="working-with-us-area gray-bg js--sticky-menu">
+        <div class="container"> 
+            <div class="row">
+                <div class="col-md-6 col-12 text-center d-flex align-items-center">
+                    <div class="hire-us-content p-5">
+                        <div class="section-title">
+                            <h4>About Us</h4>
+                        </div>
+                        <p style="text-align: justify; color:black;" class="user-select-none">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                 Om Gurudev Paints company was established in the year of 2006. 
+                                We are leading Manufacturer and Supplier of funiturer enamel, epoxy Paint, Synthetic Enamel Paint etc.
+                                 We have constructed a state-of-the-art infrastructural base. This base comprises various departments 
+                                 such as procurement, production, quality testing, warehousing & packaging and sales & marketing. <br>
+                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                All departments are armed with requisite amenities and handled by highly experienced team of
+                                 professionals. Additionally, we organize crucial training sessions and skill development programs 
+                                 for our workforce in order to sharpen their skill and to enhance knowledge.</p>
+                        <a href="/contact" class="btn rounded hire-us-btn">Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-md-6 d-none d-md-block">
+                    <div class="hire-us-img pt-50">
+                        <img src="{% static 'home/about_page.jpg' %}" class="figure-img img-fluid rounded mx-auto d-block" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Working With Us Area -->
+
+{% endblock body %}

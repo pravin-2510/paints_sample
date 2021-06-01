@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+    {% url 'home' as home %}
+    {% url 'home' as home %}
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Om Gurudev Paint Ahmednagar">
+
+  <!-- Title -->
+{% load static %}
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}">
+
+
+<!-- CSS Here -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+   <!-- MagnificPopup.css -->
+   <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+   <!-- SlickNav.css -->
+   <link rel="stylesheet" href="{% static 'assets/css/slicknav.min.css' %}">
+   <!-- Owl.carousel.css -->
+   <link rel="stylesheet" href="{% static 'assets/css/owl.carousel-2.3.4.min.css' %}">
+   <!-- Fontawesome.css -->
+   <link rel="stylesheet" href="{% static 'assets/css/fontawesome-free-5.12.0.min.css' %}">
+   <!-- Bootstrap.css -->
+   <link rel="stylesheet" href="{% static 'assets/css/bootstrap-4.3.1.min.css' %}">
+   <!-- Default.css -->
+   <link rel="stylesheet" href="{% static 'assets/css/default.css' %}">
+   <!-- Style.css -->
+   <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+   <!-- Responsive.css -->
+   <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+
+   <!-- ColorNip.css -->
+   <link rel="stylesheet" href="{% static 'assets/css/colornip.min.css' %}">
+   <link id="theme" rel="stylesheet" href="{% static 'assets/css/theme-colors/theme-default.css' %}">
+
+   <!-- Jquery -->
+   <script src="{% static 'assets/js/jquery-3.4.1.min.js' %}"></script>
+
+  <title>{% block title %} {% endblock title %}</title>
+  
+</head>
+
+<body>
+  <!-- Color Nip -->
+  <div class="Switcher">
+    <button id="Switcher__control" class="Switcher__control">
+        <i class="fas fa-cogs"></i>
+    </button>
+    <h5 style="margin-bottom: 5px">Change Color</h5>
+    <ul id="colors" data-dir="{% static 'assets/css/theme-colors/' %}">
+        <li data-scheme="theme-default" data-color="#4272d7" style="background-color:#4272d7 "></li>
+        <li data-scheme="theme-red" data-color="#fa4251" style="background-color:#fa4251"></li>
+        <li data-scheme="theme-green" data-color="#63c76a" style="background-color:#63c76a"></li>
+        <li data-scheme="theme-yellow" data-color="#ffe048" style="background-color:#ffe048"></li>
+        <li data-scheme="theme-orange" data-color="#f39c12" style="background-color:#f39c12"></li>
+    </ul>
+    </div>
+    <!-- End Color Nip -->
+    <div class="search-overlay"></div>
+    <!-- Search Modal -->
+    <div class="modal fade" id="search-modal">
+        <div class="modal-dialog">
+             <div class="modal-content">
+                 <form action="index.html" class="search-popup-wrapper">
+                     <input type="search" placeholder="Search here...">
+                     <i class="fas fa-search"></i>
+                 </form>
+             </div>
+         </div>
+     </div>
+     <!-- End Search Modal -->
+    <!-- Start Header Area -->
+    <div class="header-area">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="row">
+                    <div class="col-lg-3 col-6">
+                        <div class="site-logo">
+							<h4><a href="/">Om Gurudev Paints</a></h4>
+                            <a data-toggle="tooltip" title="Be-one" href="/"></a>
+                        </div>
+                    </div>
+                    <div class="col-6 d-lg-none static text-right">
+                        <div class="show-mobile-menu"></div>
+                    </div>
+                    <div class="col-lg-9 text-right d-none d-lg-block ">
+                        <nav class="menu-wrapper">
+                            <ul class="main-menu" id="mobile-menu">
+                                <li class="{% block home %}{% endblock home %}"><a href="/">Home</a></li>
+                                <li class="{% block product %}{% endblock product %}"><a href="/product">Product</a></li>
+                                <li class="{% block down %}{% endblock down %}"><a href="/broucher">Download broucher</a></li>
+                                <li class="{% block about %}{% endblock about %}"><a href="/aboutus">About Us</a></li>
+                                <li class="{% block contact %}{% endblock contact %}"><a href="/contact">Contact Us</a></li>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Header Area -->
+   
+    {% block body %}{% endblock body %}
+
+
+     <!-- Start Footer Area -->
+     <footer class="footer-area pt-60 pb-60 black-bg " id="contact-us">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3 col-md-6">
+                  <div class="footer-widget">
+                      <div class="footer-logo">
+                          <a style="font-size: 20px!important;" href="/">Om Gurudev Paint </a>
+                      </div>
+                      <div class="footer-dec">
+                          <p>Om Gurudev Paints company was established in the year of 2006. We are leading Manufacturer and Supplier of funiturer enamel, epoxy Paint, Synthetic Enamel Paint etc. We have constructed a state-of-the-art infrastructural base. This base comprises various departments such as procurement, production, quality testing, warehousing & packaging and sales & marketing.
+                          </p>
+                      </div>
+                      <ul class="social-links">
+                          <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                          <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="#" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
+                          <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <div class="footer-widget">
+                      <div class="widget-title">
+                          <h6>Quick Link</h6>
+                      </div>
+                      <ul class="footer-menu">
+                          <li><a href="/">Home</a></li>
+                          <li><a href="/product">Product</a></li>
+                          <li><a href="/broucher">Broucher</a></li>
+                          <li><a href="/aboutus">About Us</a></li>
+                          <li><a href="/contact">Contact Us</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <div class="footer-widget">
+                      <div class="widget-title">
+                          <h6>Contact us</h6>
+                      </div>
+                      <div class="address-line">
+                          <p><b>Address:</b>  Shirdi-Kopargoan Road, In Front Of Swastik Hotel, SR. No. 370/11, Kokamthan District- Ahmednagar, Kopargaon-423601, Maharashtra, India</p>
+                          <p><b>Phone:</b>  <a href="tel:+918983382986">+918983382986</a></p>
+                          <p><b>Email:</b>  <a href="mailto: pravindhanad2@gmail.com">pravindhanad2@gmail.com</a></p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <div class="footer-widget">
+                      <div class="widget-title">
+                          <h6>Get Directions</h6>
+                      </div>
+                      <div class="mapouter"><div class="gmap_canvas"><iframe width="300" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=om%20gurudev%20paint&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br><style>.mapouter{position:relative;text-align:right;height:300px;width:300px;}</style><a href="https://www.embedgooglemap.net">google map generator</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:300px;}</style></div></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <!-- End Footer Area -->
+  <!-- End Copyright Area -->
+  <div class="copyright-area black-bg">
+      <div class="container">
+          <div class="row ">
+              <div class="col-12 text-center">
+                  <div class="copyright-area ">
+                      <p>Copyright © 2021 Designed by <a href="https://www.wpfreecloud.com">wpfreecloud.com</a>. All rights reserved.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- End Copyright Area -->
+<!-- JS -->
+ <!-- Popper.js -->
+ <script src="{% static 'assets/js/popper.min.js' %}"></script>
+ <!-- Bootstrap.js -->
+ <script src="{% static 'assets/js/bootstrap-4.3.1.min.js' %}"></script>
+ <!-- Modernizr.js -->
+ <script src="{% static 'assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+ <!-- Owl.Carousel.js -->
+ <script src="{% static 'assets/js/vendor/owl.carousel-2.3.4.min.js' %}"></script>
+ <script src="{% static 'assets/js/vendor/owl.carousel2.thumbs.min.js' %}"></script>
+ <!-- Waypoints.js -->
+ <script src="{% static 'assets/js/vendor/waypoints-4.0.1.min.js' %}"></script>
+ <!-- ColorNip.js -->
+ <script src="{% static 'assets/js/vendor/colornip.min.js' %}"></script>
+ <!-- SlickNav.js -->
+ <script src="{% static 'assets/js/vendor/slicknav.min.js' %}"></script>
+ <!-- ScrollUp.js -->
+ <script src="{% static 'assets/js/vendor/jquery.scrollUp.min.js' %}"></script>
+ <!-- MagnificPopup.js -->
+ <script src="{% static 'assets/js/vendor/magnific-popup.min.js' %}"></script>
+
+ <!-- Main.js -->
+ <script src="{% static 'assets/js/main.js' %}"></script>
+    
+</body>
+
+</html>
